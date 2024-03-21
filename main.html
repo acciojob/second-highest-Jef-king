@@ -10,8 +10,17 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			let z=arr.length;
-			if(z>2){
+			let z=arr.length,y=0;
+			for(let i=1;i<z;i++){
+				if(arr[i]==arr[i-1]){
+					y+=1;
+				}
+			}
+			alert(y);
+			if(y==(z-1)){
+				return -Infinity;
+			}else if(z>2){
+				
 			for(let i=0;i<z;i++){
 				for(let j=i+1;j<z;j++){
 					if(arr[j]>arr[i]){
